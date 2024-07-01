@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Explore Evan Kraus' Devlopment Project - Personal Yearbook">
+    <meta name="keywords" content="Evan Kraus, Web Development, Development, Front-End Development, Back-End Development, Personal Yearbook, HTML, CSS, PHP, MySQL">
+    <meta name="author" content="Evan Kraus">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- BOOTSRTAP APPLICATION -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!--HIGHLIGHT.JS PLUGIN-->
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github-dark.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/partials/devprojects.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9EPZXVVMC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N9EPZXVVMC');
+    </script>
+
+    <title>Evan Kraus | Yearbook Project</title>
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+  hljs.highlightElement(block);
+  });
+});
+</script>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="img/Logo.svg" alt="Evan Kraus Logo" width="200" height=30"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" aria-current="page" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item">
+            <a class="nav-link" href="projects.html" aria-current="page" role="button">Projects</a>
+        </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+  <hr class="solid">
+
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center"><h1 class="h1">PERSONAL YEARBOOK</h1></div>
+        
+        <img class="codeImg" src="img/devprojects/yearbook.png" alt="Yearbook End Result">
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+          <h1 class="h3 text-center title01">Goal</h1>
+          <p class="proj-text">The goal was to create a system where users can input details a “work force profile” for an HR department or Yearbook. This system would allow you to input different details and then output the details back with a picture of myself. The objective is to demonstrate how those series of files and code block's function and complete the requires changes to accomodate the additional data.</p>
+        </div>
+
+        <div class="col-sm-12">
+          <h1 class="h3 text-center">Narrative</h1>
+          <p class="proj-text">Creating a single database that contains answers to specific questions. The structure of this project is done based upon the Model View Controller method utilizing past lecture notes as well as asignments. Details that were needed for this database were full name, personal photo, aspiring to be or future occupation, known to say or famous last words, what they are most inspired by, and their dislikes.</p>
+        </div>
+
+        <div class="col-sm-12">
+            <h1 class="h3 text-center">Process</h1>
+            <p class="proj-text">I began the process of creating this project by creating my file structure which inclued 'crud.php', 'db.php', 'edit.php', 'layout.php' stylesheets, and gathered the image I would need. I then went to PhpMyAdmin to create the database, created it using the name classlist, with a table called students, the fields in this table consist of id, fn, ln, job, words, inspire, and dislike. The schema utilizes SQL commands to manage data operations like inserting, updating, and deleting records.</p>
+        </div>
+
+      <div class="spacer"></div>
+
+      <div class="col-sm-12 text-center">
+        <img class="img-fluid mockup file-img" src="img/devprojects/yearbook_files.png" alt="File structure for Personal Yearbook Project">
+      </div>
+      <div class="spacer"></div>
+      <div class="col-sm-12 text-center">
+        <img class="img-fluid mockup db-img" src="img/devprojects/yearbook_db.png" alt="Database structure for Personal Yearbook Project">
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="col-sm-12">
+        <p class="proj-text">After the database is created, I started on my 'db.php' file, which is the database configuration file. It sets the parameters to the MySQL database, including the hostname, database name, username, and password. This file uses constants to store the parameters, making sure that they can be easily changed if necessary. With this file it ensures that all others will be able to access the database through it.</p>
+
+        <h1 class="h4">db.php</h1>
+
+<pre><code class="language-php">error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+define('_HOST_NAME', 'localhost');
+define('_DATABASE_NAME', 'classlist');
+define('_DATABASE_USER_NAME', 'root');
+define('_DATABASE_PASSWORD', 'root');
+
+$MySQLiconn = new MySQLi(_HOST_NAME,_DATABASE_USER_NAME,_DATABASE_PASSWORD,_DATABASE_NAME);
+
+if($MySQLiconn->connect_errno)
+{
+   die("ERROR : -> ".$MySQLiconn->connect_error);
+}
+</code></pre>
+
+      <p class="proj-text">After I finished of the Model section of this project by creating the 'crud.php' file. This file handles the Create, Read, Update, and Delete(C.R.U.D) operations. In the code I added an include 'db.php' to ensure that the database connection is established. I also created a 'save' and 'edit' button, if the save button is pressed it captures the information from the fields and execute and 'insert' query creating a new record, the edit button fetches the existing record to populate the form for editing. The script handles deletion through a 'GET' request.</p>
+
+      <h1 class="h4">crud.php</h1>
+<pre><code class="language-php">error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+include_once 'db.php';
+
+/* code for data insert */
+if(isset($_POST['save']))
+{
+   //records the data user filled in the form, into php variable
+    $fn = $MySQLiconn->real_escape_string($_POST['fn']);
+    $ln = $MySQLiconn->real_escape_string($_POST['ln']);
+    $job = $MySQLiconn->real_escape_string($_POST['job']);
+    $words = $MySQLiconn->real_escape_string($_POST['words']);
+    $inspire = $MySQLiconn->real_escape_string($_POST['inspire']);
+    $dislike = $MySQLiconn->real_escape_string($_POST['dislike']);
+
+    //writes data from those variables, into the table fields
+    $SQL = $MySQLiconn->query("INSERT INTO students(fn,ln,job,words,inspire,dislike,photo) VALUES('$fn','$ln','$job','$words','$inspire','$dislike', 'evankraus.jpg')");
+
+    if(!SQL){
+       echo $MySQLiconn->error;
+    }
+}
+
+if(isset($_GET['edit']))
+{
+    $SQL = $MySQLiconn->query("SELECT * FROM students WHERE id=".$_GET['edit']);
+    $getROW = $SQL->fetch_array();
+}
+
+/* CODE DATA FOR DELETE */
+if(isset($_GET['del']))
+{
+    //query("DELETE FROM table_name WHERE id="id#1");
+    $SQL = $MySQLiconn->query("DELETE FROM students WHERE id=".$_GET['del']);
+    // header(); PHP method that redirects the user back to the index.php or main document for results
+    header("Location: edit.php");
+}
+
+/* CODE DATA FOR UPDATE */
+if(isset($_POST['update']))
+{
+    // after the user edits the data, UPSATE writes those changes to the form fields
+    $SQL = $MySQLiconn->query("UPDATE students SET fn='".$_POST['fn']."', ln='".$_POST['ln']."', job='".$_POST['job']."', words='".$_POST['words']."', inspire='".$_POST['inspire']."', dislike='".$_POST['dislike']."'WHERE id=".$_GET['edit']);
+    header("Location: edit.php");
+}
+</code>  </pre>
+
+      <p class="proj-text">After the 'crud.php' file I went ahead and did the 'edit.php' file. This file provides the user interface for adding or editing the records of the database. The scripts include 'crud.php' to utilize its functionality. The code checks if the button is clicked which processes an update operation, redirecting to 'layout.php'. If the save button is clicked, it captures form data and calls 'crud.php' to insert a new record.</p>
+      </div>
+
+      <h1 class="h4">edit.php</h1>
+<pre><code class="language-php">&lt;?php
+include_once 'crud.php';
+  
+// Check if the update button is clicked
+if(isset($_POST['update'])) {
+    // Perform the update operation as before
+    $SQL = $MySQLiconn->query("UPDATE students SET fn='".$_POST['fn']."', ln='".$_POST['ln']."',job='".$_POST['job']."', words='".$_POST['words']."', inspire='".$_POST['inspire']."',dislike='".$_POST['dislike']."'WHERE id=".$_GET['edit']);
+  
+    // Check if the update operation was successful
+    if($SQL) {
+        // Redirect to layout.php after updating
+        header("Location: layout.php");
+        exit(); 
+    }
+} elseif (isset($_POST['save'])) {
+    // Perform the insert operation for new data
+    $fn = $MySQLiconn->real_escape_string($_POST['fn']);
+    $ln = $MySQLiconn->real_escape_string($_POST['ln']);
+    $job = $MySQLiconn->real_escape_string($_POST['job']);
+    $words = $MySQLiconn->real_escape_string($_POST['words']);
+    $inspire = $MySQLiconn->real_escape_string($_POST['inspire']);
+    $dislike = $MySQLiconn->real_escape_string($_POST['dislike']);
+  
+    $SQL = $MySQLiconn->query("INSERT INTO students(fn,ln,job,words,inspire,dislike, photo) VALUE('$fn','$ln','$job','$words','$inspire','$dislike', 'evankraus.jpg')");
+  
+    if($SQL) {
+        // Redirect to layout.php after inserting
+        header("Location: layout.php");
+        exit();
+    } else {
+        echo $MySQLiconn->error;
+    }
+}
+  
+  // Fetch data if editing
+if(isset($_GET['edit'])) {
+    $SQL = $MySQLiconn->query("SELECT * FROM students WHERE id=".$_GET['edit']);
+    $getROW = $SQL->fetch_array();
+}
+?&gt;</code>  </pre>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Personal Yearbook - Evan Kraus&lt;/title&gt;
+   &lt;link rel="stylesheet" href="edit.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;center&gt;
+     &lt;div id="header"&gt;
+         &lt;label&gt;C.R.U.D.&lt;/label&gt;
+     &lt;/div&gt;
+   &lt;br&gt;
+   &lt;div id="form"&gt;
+   &lt;form method="post"&gt;
+     &lt;table width="100%" border="1" cellpadding="15"&gt;
+       &lt;tr&gt;
+         &lt;td&gt;&lt;input type="text" name="fn" placeholder="First Name" value="&lt;?php if(isset($_GET ['edit'])) echo $getROW['fn']; ?&gt;"&gt;&lt;/td&gt;
+         &lt;td&gt;&lt;input type="text" name="ln" placeholder="Last Name" value="&lt;?php if(isset($_GET ['edit'])) echo $getROW['ln']; ?&gt;"&gt;&lt;/td&gt;
+         &lt;td&gt;&lt;input type="text" name="job" placeholder="Aspiring to be:" value="&lt;?php if(isset($_GET ['edit'])) echo $getROW['job']; ?&gt;"&gt;&lt;/td&gt;
+         &lt;td&gt;&lt;input type="text" name="words" placeholder="Known to Say/Famous Last Words:" value="&lt;?php if(isset($_GET ['edit'])) echo $getROW['words']; ?&gt;"&gt;&lt;/td&gt;
+         &lt;td&gt;&lt;input type="text" name="inspire" placeholder="I'm Inspired by" value="&lt;?php if(isset($_GET ['inspire'])) echo $getROW['inspire']; ?&gt;"&gt;&lt;/td&gt;
+         &lt;td&gt;&lt;input type="text" name="dislike" placeholder="I Dislike" value="&lt;?php if(isset($_GET ['dislike'])) echo $getROW['dislike']; ?&gt;"&gt;&lt;/td&gt;
+       &lt;/tr&gt;
+     &lt;tr&gt;
+     &lt;td&gt;
+     &lt;?php if (isset($_GET['edit'])) : ?&gt;
+       &lt;button type="submit" name="update"&gt; Update &lt;/button&gt;
+     &lt;?php else : ?&gt;
+       &lt;button type="submit" name="save"&gt; Save &lt;/button&gt;
+     &lt;?php endif; ?&gt;
+     &lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;/table&gt;
+   &lt;/form&gt;
+   &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>  </pre>
+
+<p class="proj-text">Lastly I worked on the file which is the main display page that lists all records from the database, 'layout.php'. It has an include 'crud.php' to ensure database interactions are possible. This code queries the database to fetch all records. Each record is displayed in a structured HTML table, formatted with CSS for better visualization. Edit and delete links are provided for each record linking the files for those functionalities. Finally I went ahead and styled both the 'layout' and 'edit' pages.</p>
+
+      <div class="spacer-small"></div>
+
+      <div class="col-sm-12 text-center live"><a href="https://github.com/evkraus/yearbook" target="_blank"><button class="liveProj">Code Files</button></a></div>
+
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 footer-txt">© 2024 Evan Kraus</div>
+        <div class="col-sm-4"><p class="email-footer">evkraus03@gmail.com</p></div>
+        <div class="col-sm-2"><a href="https://www.linkedin.com/in/evan-kraus-78bb1a274/" target="_blank"><img class="social-footer" src="img/LinkedinLogo.svg" alt="Linkedin social media icon"></a></div>
+        <div class="col-sm-2"><a href="#" target="_blank"><img class="social-footer" src="img/GetHubLogo.svg" alt="GitHub social media logo"></a></div>
+      </div>
+    </div>  
+  </footer>
+
+</body>
+</html>

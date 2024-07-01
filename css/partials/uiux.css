@@ -1,0 +1,71 @@
+.active-item {
+    background-color: #BE97C6;
+}
+.active-item:hover {
+    background-color: #BE97C6;
+}
+* {
+	box-sizing: border-box;
+}
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+.proj01-wrapper{
+	padding: 1em;
+	color: white;
+	min-height: 10vh;
+    min-width: min(22em, 100%);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+p {
+	margin: 0;
+}
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: #c189cc;
+	--c2: #DCC48E;
+}
+.proj01-img{
+    object-fit: cover;
+    width: 19.5em;
+    height: 12em;
+    opacity: 0;
+    transition: .5s ease;
+}
+.proj01-img:hover{
+    opacity: 90%;
+    cursor: pointer;
+}
+.proj01-box{
+	font-size: 3vw;
+    width: 19.78em;
+	margin: max(1rem, 3vw);
+	border: 0.35rem solid;
+    background-image: linear-gradient(45deg, #b37cbe, #BE97C6, #ddbd73, #DCC48E);
+	padding: 0vw;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}

@@ -1,0 +1,122 @@
+/* .carousel{
+    height: -10em;
+} */
+.slide-sub{
+    color: #686868;
+}
+.h1{
+    color: #DCC48E;
+    font-size: 6em;
+    padding-top: 0.5em;
+    font-family: "peridot-pe-variable", sans-serif;
+    font-variation-settings: "ital" 0, "wdth" 100, "wght" 700;
+}
+.proj-text{
+    color: white;
+}
+.h2{
+    color: #DCC48E;
+    font-size: 4em;
+    padding-top: 0.5em;
+    font-family: "peridot-pe-variable", sans-serif;
+    font-variation-settings: "ital" 0, "wdth" 100, "wght" 700;
+}
+.toolIcon{
+    width: 5em;
+}
+.toolIcon2{
+    width: 7em;
+}
+.toolIcon3{
+    width: 7em;
+}
+.liveProj{
+    color: black;
+    border-radius: 60px;
+    border: none;
+    background-color: #BE97C6;
+    width: 40em;
+    height: 5em;
+}
+h5{
+    color: black;
+    font-size: 1.5em;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: #BE97C6;
+}
+.fire-persona{
+    filter: drop-shadow(1px 1px 20px #BE97C6);
+    border-radius: 25px 25px 25px 25px;
+}
+.fire-draw{
+    filter: drop-shadow(1px 1px 20px #BE97C6);
+    border-radius: 30px 30px 30px 30px;
+    width: 35em;
+}
+.slide-sub{
+    color: white;
+}
+@media only screen and (max-width: 1000px) {
+    .h1{
+        font-size: 4em;
+    }
+    .h2{
+        font-size: 3.5em;
+    }
+    .proj-text{
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width: 775px) {
+    .liveProj{
+        width: 30em;
+        height: 4em;
+    }
+    .fire-draw{
+        width: 20em;
+    }
+    .fire-persona{
+        width: 25em;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .liveProj{
+        width: 20em;
+        height: 3em;
+    }
+    .h1{
+        font-size: 3em;
+    }
+    .h2{
+        font-size: 2.5em;
+    }
+    .proj-text{
+        font-size: 0.6em;
+    }
+    .toolIcon{
+        width: 3em;
+    }
+    .toolIcon2{
+        width: 5em;
+    }
+    .toolIcon3{
+        width: 5em;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .fire-draw{
+        width: 15em;
+    }
+    .fire-persona{
+        width: 20em;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .liveProj{
+        width: 13em;
+        height: 2em;
+    }
+    .h1{
+        font-size: 2em;
+    }
+}

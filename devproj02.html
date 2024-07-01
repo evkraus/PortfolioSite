@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Evan Kraus' UI/UX Design Project: Kraus Photography - Responsive Website">
+    <meta name="keywords" content="Evan Kraus, UI/UX Design, Kraus Photography, Responsive Website, Web Development, JavaScript, NanoGallery2">
+    <meta name="author" content="Evan Kraus">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- BOOTSRTAP APPLICATION -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!--HIGHLIGHT.JS PLUGIN-->
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github-dark.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/partials/devprojects.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9EPZXVVMC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N9EPZXVVMC');
+    </script>
+
+    <title>Evan Kraus | Project Krauster Photography</title>
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+  hljs.highlightElement(block);
+  });
+});
+</script>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="img/Logo.svg" alt="Evan Kraus Logo" width="200" height=30"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" aria-current="page" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item">
+            <a class="nav-link" href="projects.html" aria-current="page" role="button">Projects</a>
+        </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+  <hr class="solid">
+
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center"><h1 class="h1">Kraus Photography - Responsive Website</h1></div>
+        <div class="col-lg-12 text-center">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/devprojects/KPhome.jpg" class="d-block w-100" alt="Kraus Photography homepage">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Homepage</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/devprojects/KPgallery.jpg" class="d-block w-100" alt="Photo gallery page image">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Gallery Page</h5>
+                  <p class="slide-sub">Page to view photo gallere, clicking images shows slideshow effect.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/devprojects/KPabout.jpg" class="d-block w-100" alt="About Lance Kraus page">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>About Page</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/devprojects/KPcontact.jpg" class="d-block w-100" alt="Contact form page">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Contact Page</h5>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+        <div class="spacer-small"></div>
+        <div class="col-sm-12">
+          <h1 class="h3 text-center">Goal</h1>
+          <p class="proj-text">Create a fully responsive website, this must have a minimum of 4 pages that have 1 section each or 1 page with 4 different major sections. This websites topic was completely up to us. There was also a requirement to use at least one JS plugin.</p>
+        </div>
+
+        <div class="col-sm-12">
+          <h1 class="h3 text-center">Process</h1>
+          <p class="proj-text">The beginning of this project we were tasked with creating an initial proposal that had a brief description of the website’s topic, a sitemap, and a low fidelity mockup of at least one page. My original topic with the proposal was a websit that sells and distributes video games online like steam but for more than just PC. I called this site “GameLink”, below are the sitemap and mockup:</p>
+        </div>
+
+        <div class="spacer-small"></div>
+
+      <div class="col-sm-12 text-center">
+        <img class="img-fluid sitemap" src="img/devprojects/GLsitemap.png" alt="Site map for GameLink">
+      </div>
+
+      <div class="spacer-small"></div>
+
+      <div class="col-sm-12 text-center">
+        <img class="img-fluid mockup" src="img/devprojects/GLmockup.png" alt="Mockup of GameLink website">
+      </div>
+
+      <div class="spacer-small"></div>
+
+      <div class="col-sm-12">
+        <p class="proj-text">I liked this topic, however as I revised my mockups with pears, my idea was bigger than both my skills and the deadline. I ended up altering the topic to be photography for my father. I chose this topic as I had a JS plugin in mind already (nanogallery02) and as it was someone, I knew I could easily acquire the photos needed.</p>
+        <p class="proj-text">I began by collecting numerous pictures from my father of a variety of things such as plants, animals, people, and scenery. Once I got the photos, I created my files ahead of time to keep them clean:</p>
+      </div>
+
+      <div class="col-sm-12 text-center">
+        <img class="img-fluid mockup" src="img/devprojects/KPfiles.png" alt="File structure for Kraus Photography">
+      </div>
+
+      <div class="spacer-small"></div>
+
+      <div class="col-sm-12">
+        <p class="proj-text">I then began by coding the gallery page first as it would be the page using the JS plugin NanoGallery02 and take the longest. I first got all the pictures onto the page and then began styling and detailing things such as borders and titles for the pictures with the plugin making it look as modern as I could.</p>
+
+        <div class="spacer-small"></div>
+
+        <h1 class="h4">HTML</h1>
+
+<pre><code class="language-html">&lt;body&gt;
+  &lt;div id="nanogallery2"&gt;
+    &lt;a href="img/Animals/Big01.jpg" data-ngThumb="img/Animals/Small01.jpg"&gt;Animals&lt;/a&gt;
+    &lt;a href="img/Animals/Big02.jpg" data-ngThumb="img/Animals/Small02.jpg"&gt;Animals&lt;/a&gt;
+    &lt;a href="img/Animals/Big03.jpg" data-ngThumb="img/Animals/Small03.jpg"&gt;Animals&lt;/a&gt;
+    &lt;a href="img/Animals/Big04.jpg" data-ngThumb="img/Animals/Small04.jpg"&gt;Animals&lt;/a&gt;
+    &lt;a href="img/birds/Bird01.jpg" data-ngThumb="img/birds/SmallB01.jpg"&gt;Birds&lt;/a&gt;
+    &lt;a href="img/birds/Bird02.jpg" data-ngThumb="img/birds/SmallB02.jpg"&gt;Birds&lt;/a&gt;
+    &lt;a href="img/birds/Bird03.jpg" data-ngThumb="img/birds/SmallB03.jpg"&gt;Birds&lt;/a&gt;
+    &lt;a href="img/birds/Bird04.jpg" data-ngThumb="img/birds/SmallB04.jpg"&gt;Birds&lt;/a&gt;
+    &lt;a href="img/PlantsFlowers/Flower01.jpg" data-ngThumb="img/PlantsFlowers/SmallF01.jpg"&gt;Flowers&lt;/a&gt;
+    &lt;a href="img/PlantsFlowers/Flower02.jpg" data-ngThumb="img/PlantsFlowers/SmallF02.jpg"&gt;Flowers&lt;/a&gt;
+    &lt;a href="img/PlantsFlowers/Flower03.jpg" data-ngThumb="img/PlantsFlowers/SmallF03.jpg"&gt;Flowers&lt;/a&gt;
+    &lt;a href="img/PlantsFlowers/Flower04.jpg" data-ngThumb="img/PlantsFlowers/SmallF04.jpg"&gt;Flowers&lt;/a&gt;
+    &lt;a href="img/PlantsFlowers/Flower05.jpg" data-ngThumb="img/PlantsFlowers/SmallF05.jpg"&gt;Flowers&lt;/a&gt;
+    &lt;a href="img/PlantsFlowers/Flower06.jpg" data-ngThumb="img/PlantsFlowers/SmallF06.jpg"&gt;Flowers&lt;/a&gt;
+    &lt;a href="img/PlantsFlowers/Plant01.jpg" data-ngThumb="img/PlantsFlowers/SmallP01.jpg"&gt;Plants&lt;/a&gt;
+    &lt;a href="img/PlantsFlowers/Plant02.jpg" data-ngThumb="img/PlantsFlowers/SmallP02.jpg"&gt;Plants&lt;/a&gt;
+    &lt;a href="img/PlantsFlowers/Plant03.jpg" data-ngThumb="img/PlantsFlowers/SmallP03.jpg"&gt;Plants&lt;/a&gt;
+    &lt;a href="img/PlantsFlowers/Plant04.jpg" data-ngThumb="img/PlantsFlowers/SmallP04.jpg"&gt;Plants&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery01.jpg" data-ngThumb="img/Scenery/SmallS01.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery02.jpg" data-ngThumb="img/Scenery/SmallS02.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery03.jpg" data-ngThumb="img/Scenery/SmallS03.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery04.jpg" data-ngThumb="img/Scenery/SmallS04.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery05.jpg" data-ngThumb="img/Scenery/SmallS05.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery06.jpg" data-ngThumb="img/Scenery/SmallS06.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery07.jpg" data-ngThumb="img/Scenery/SmallS07.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery08.jpg" data-ngThumb="img/Scenery/SmallS08.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery09.jpg" data-ngThumb="img/Scenery/SmallS09.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery10.jpg" data-ngThumb="img/Scenery/SmallS10.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery11.jpg" data-ngThumb="img/Scenery/SmallS11.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery12.jpg" data-ngThumb="img/Scenery/SmallS12.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery13.jpg" data-ngThumb="img/Scenery/SmallS13.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery14.jpg" data-ngThumb="img/Scenery/SmallS14.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery15.jpg" data-ngThumb="img/Scenery/SmallS15.jpg"&gt;Scenery&lt;/a&gt;
+    &lt;a href="img/Scenery/Scenery16.jpg" data-ngThumb="img/Scenery/SmallS16.jpg"&gt;Scenery&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;footer&gt;
+      &lt;div class="footerContainer"&gt;
+          &lt;img class="footerLogo" src="img/Logo.svg"&gt;
+          &lt;h4&gt;Kraus Photography&lt;/h4&gt;
+      &lt;/div&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</code>  </pre>
+
+      <h1 class="h4">JavaScript</h1>
+<pre><code class="language-javascript">$('#nanogallery2').nanogallery2({
+    galleryL1DisplayMode: 'fullContent',
+    galleryDisplayMode: 'rows',
+    galleryMaxRows: 4,
+    gallerySorting: 'random',
+    thumbnailL1Height: 400, thumbnailL1Width: 'auto',
+    thumbnailL1GutterWidth: 20,
+    thumbnailL1GutterHeight: 20,
+    thumbnailL1BorderHorizontal: 0,
+    thumbnailL1BorderVertical: 0,
+    thumbnailHeight: 400, thumbnailWidth: 'auto',
+    thumbnailGutterWidth: 2,
+    thumbnailGutterHeight: 2,
+    thumbnailBorderHorizontal: 0,
+    thumbnailBorderVertical: 0,
+    thumbnailAlignment: 'fillWidth',
+    thumbnailToolbarImage: null,
+    thumbnailToolbarAlbum: null,
+    thumbnailL1Label: {display: true, position:'overImageBottom', hideIcons: true, titleFontSize: '1em', align:'center', titleMultiLine: true, diplayDescription: false},
+    thumbnailL1Label: {display: true, valign: 'bottom', hideIcons: true, titleFontSize: '3em', align: 'left',titleMultiLine: true, diplayDescription: false},
+    thumbnailLabel: {display: true, position: 'overImageOnBottom', hideIcons:true, titleFontSize: '1em', align:'center', titleMultiLine: true, diplayDescription: false},
+    thumbnailL1DisplayTransition: 'flipUp',        
+    thumbnailDisplayTransition: 'slideDown',        
+    thumbnailDisplayTransitionDuration: 500,
+    thumbnailDisplayInterval: 30,
+    thumbnailL1BuildInit2: 'title_font-weight_bold|image_scale_0.8|label_left_-10px|label_text-transform_uppercaselabel_top_95%|label_rotateZ_-90deg|label_transform-origin_top left',
+    thumbnailL1BuildInit2: 'title_font-weight_bold|image_scale_0.8|label_left_-15px|label_top_95%label_rotateZ_-90deg|label_transform-origin_top left',
+    thumbnailL1HoverEffect2: 'imageGrayOff|title_color_#46D6AB_#aaaaaa|labelOpacity50',
+    touchAnimation: false,
+    touchAutoOpenDelay: 800,
+    galleryTheme : { 
+        thumbnail: { background: '#111', titleShadow : '', descriptionShadow : 'none', titleColor: '#41ffc6',borderColor: '#000' },
+        navigationBreadcrumb: { background : '#3C4B5B' },
+    },
+        locationHash: false
+});</code>  </pre>
+
+        <p class="proj-text">I then began coding the other pages as they did not have much content, it came down to styling for most of the work. For example, the contact page I created a responsive card with a photo rather than simply having static contact information. I believe small details like this keep the website unique and more modern.</p>
+      </div>
+
+      <div class="col-sm-12">
+        <h1 class="h3 text-center">Conclusion</h1>
+        <p class="proj-text">The beginning of this project we were tasked with creating an initial proposal that had a brief description of the website’s topic, a sitemap, and a low fidelity mockup of at least one page. My original topic with the proposal was a website that sells and distributes video games online like steam but for more than just PC. I called this site “GameLink”, below are the sitemap and mockup:</p>
+      </div>
+
+      <div class="spacer-small"></div>
+
+      <div class="col-sm-12">
+        <h1 class="h3 text-center">Sources</h1>
+        <p class="source-text">Plugin: <a class="nano-link" href="https://nanogallery2.nanostudio.org">NanoGallery2</a></p>
+        <p class="source-text">Images: <label>Photos acquired and approved by Lance Kraus</label> <strong>lkraus@telus.net</strong></p>
+
+        <div class="spacer-small"></div>
+      </div>
+
+      <div class="col-sm-12 text-center live"><a href="https://krausphotography.evankraus.ca" target="_blank"><button class="liveProj">Live Prototype</button></a></div>
+
+    </div>
+  </div>
+
+  <div class="spacer-small"></div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 footer-txt">© 2024 Evan Kraus</div>
+        <div class="col-sm-4"><p class="email-footer">evkraus03@gmail.com</p></div>
+        <div class="col-sm-2"><a href="https://www.linkedin.com/in/evan-kraus-78bb1a274/" target="_blank"><img class="social-footer" src="img/LinkedinLogo.svg" alt="Linkedin social media icon"></a></div>
+        <div class="col-sm-2"><a href="#" target="_blank"><img class="social-footer" src="img/GetHubLogo.svg" alt="GitHub social media logo"></a></div>
+      </div>
+    </div>  
+  </footer>
+
+</body>
+</html>

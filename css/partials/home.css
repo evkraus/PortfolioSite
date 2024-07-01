@@ -1,0 +1,131 @@
+@import url("https://use.typekit.net/zuc8uqk.css");
+@import url("https://use.typekit.net/zuc8uqk.css");
+
+
+/* --- TOP SECTION TEXT --- */
+.h1{
+    color: #DCC48E;
+    width: 6em;
+    font-size: 6em;
+    padding-top: 0.5em;
+    font-family: "peridot-pe-variable", sans-serif;
+    font-variation-settings: "ital" 0, "wdth" 100, "wght" 700;
+}
+.head-text{
+    color: #686868;
+    width: 30em;
+    font-size: 0.18em;
+    padding-left: 0.5em;
+}
+.social-icon{
+    width: 0.6em;
+}
+/* --- TOP SECTION PHOTO --- */
+.home-photo{
+    padding: 0.2em;
+    margin-left: 6.5em;
+}
+
+/* --- ABOUT BUTTON --- */
+.about-btn-txt{
+    color: black;
+    text-decoration: none;
+}
+.about-btn{
+    background-color: #BE97C6;
+}
+.about-btn:hover{
+    background-color: #b37cbe;
+}
+
+/* --- ABOUT SECTION --- */
+.h2{
+    color: #DCC48E;
+    width: 6em;
+    font-size: 6em;
+    padding-top: 0.5em;
+    font-family: "peridot-pe-variable", sans-serif;
+    font-variation-settings: "ital" 0, "wdth" 100, "wght" 700;
+}
+.abt-strong{
+    color: white;
+    font-size: 1.8em;
+    padding-top: 2em;
+}
+.about-txt{
+    color: #686868;
+    font-size: 1.1em;
+}
+.about-link{
+    color: #BE97C6;
+}
+.homeproj01{
+    width: 90%;
+}
+.blockquote{
+    color: #ffffff;
+}
+.blockquote-footer{
+    color: #686868;
+}
+.img-thumbnail{
+    background-color: #DCC48E;
+}
+.proj-btn{
+    background-color: #BE97C6;
+    color: black;
+}
+.proj-btn:hover{
+    background-color: #b37cbe;
+}
+.work-title{
+    color: #DCC48E;
+    font-size: 6em;
+    padding-top: 0.5em;
+    font-family: "peridot-pe-variable", sans-serif;
+    font-variation-settings: "ital" 0, "wdth" 100, "wght" 700;
+}
+
+@media only screen and (max-width: 1400px) {
+    .home-ab{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .home-photo{
+        position: relative;
+        margin: 2em;
+    }
+    .img-thumbnail{
+        width: 50%;
+    }
+    .projects{
+        margin: 1em;
+    }
+    .feature-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .home-photo{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .head-text{
+        width: 20em;
+    }
+    .work-title{
+        font-size: 4em;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .head-text{
+        width: 14em;
+    }
+}

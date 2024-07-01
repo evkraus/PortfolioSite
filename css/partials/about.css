@@ -1,0 +1,114 @@
+.h1{
+    color: #DCC48E;
+    width: 6em;
+    font-size: 6em;
+    padding-top: 0.5em;
+    font-family: "peridot-pe-variable", sans-serif;
+    font-variation-settings: "ital" 0, "wdth" 100, "wght" 700;
+}
+.abt-strong{
+    color: white;
+    font-size: 1.5em;
+    width: 22em;
+    padding-top: 2em;
+}
+.about-txt{
+    color: #686868;
+    width: 35em;
+    font-size: 1em;
+}
+.social-icon{
+    width: 4.5em;
+    padding-right: 1em;
+}
+.about-img{
+    width: 45em;
+    height: 45em;
+    object-fit: cover;
+    box-shadow: 0px 0px 30px #BE97C6;
+}
+.h2{
+    color: #DCC48E;
+    width: 6em;
+    font-size: 6em;
+    padding-top: 0.5em;
+    font-family: "peridot-pe-variable", sans-serif;
+    font-variation-settings: "ital" 0, "wdth" 100, "wght" 700;
+}
+.capa-txt{
+    color: #686868;
+    width: 35em;
+    font-size: 1em;
+    margin-top: 3em;
+}
+.carousel-item{
+    height: 50em;
+}
+.capa-btn{
+    color: white;
+    background-color: black;
+    border: #BE97C6 2px solid;
+    border-radius: 15px;
+    width: 7em;
+    height: 3em;
+    margin: 0.5em;
+}
+.capa-btn:hover{
+    cursor: auto;
+}
+.abt-carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 1200px) {
+    .h1{
+        float: center;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 625px) {
+    .abt-strong{
+        font-size: 1.3em;
+    }
+    .about-txt{
+        font-size: 0.8em;
+    }
+    .capa-txt{
+        font-size: 0.8em;
+    }
+    .h2{
+        font-size: 5em;
+    }
+}
+@media only screen and (max-width: 475px) {
+    .abt-strong{
+        font-size: 0.9em;
+    }
+    .about-txt{
+        font-size: 0.6em;
+    }
+    .capa-txt{
+        font-size: 0.6em;
+    }
+    .h2{
+        font-size: 3.3em;
+    }
+    .h3{
+        font-size: 3em;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .capa-txt{
+        font-size: 0.5em;
+    }
+    .about-txt{
+        font-size: 0.5em;
+    }
+    .abt-strong{
+        font-size: 0.8em;
+    }
+    .h2{
+        font-size: 3.1em;
+    }
+}

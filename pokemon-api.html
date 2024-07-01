@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Explore Evan Kraus' Devlopment Project - Personal Yearbook">
+    <meta name="keywords" content="Evan Kraus, Web Development, Development, Front-End Development, Back-End Development, Personal Yearbook, HTML, CSS, PHP, MySQL">
+    <meta name="author" content="Evan Kraus">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!-- BOOTSRTAP APPLICATION -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!--HIGHLIGHT.JS PLUGIN-->
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github-dark.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/partials/devprojects.css" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9EPZXVVMC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N9EPZXVVMC');
+    </script>
+
+    <title>Evan Kraus | Yearbook Project</title>
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+  hljs.highlightElement(block);
+  });
+});
+</script>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="img/Logo.svg" alt="Evan Kraus Logo" width="200" height=30"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" aria-current="page" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item">
+            <a class="nav-link" href="projects.html" aria-current="page" role="button">Projects</a>
+        </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+  <hr class="solid">
+
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center"><h1 class="h1">POKÉMON API</h1></div>
+        
+        <img class="codeImg" src="img/devprojects/pokemon.png" alt="API End Result">
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+          <h1 class="h3 text-center title01">Goal</h1>
+          <p class="proj-text">The goal of this project was to create a single-page web application that fetches and displays data from API of choice. I chose the PokéAPI due to its rich dataset that includes detailed information on each Pokémon, but most of all my fondness for Pokémon. The challenge was not only to fetch and display this data but also to implement additional functionalities.</p>
+        </div>
+
+        <div class="col-sm-12">
+          <h1 class="h3 text-center">Process</h1>
+          <p class="proj-text">For this project, I included two main functionalities. The first was a load more feature, this feature allows users to load more Pokemon by clicking the 'Load More' button, which dynamically fetches additional data from the API and appends it to existing list. The second feature added was a search feature, this search bar allows users to input a Pokémon's name and fetch its specific details.</p>
+        </div>
+
+      <div class="spacer-small"></div>
+
+      <div class="col-sm-12 text-center">
+        <img class="img-fluid mockup poke-img" src="img/devprojects/loadbutton.png" alt="Load More button funtion for Pokémon Project">
+      </div>
+      <div class="spacer"></div>
+      <div class="col-sm-12 text-center">
+        <img class="img-fluid mockup poke-img2" src="img/devprojects/searchbar.png" alt="Searchbar funtion for Pokémon Project">
+      </div>
+
+      <div class="spacer-small"></div>
+
+      <div class="col-sm-12">
+        <p class="proj-text">My inital focus was on fetching and displaying all the Pokémon data I would need on the page. I used the 'getAllPokemon()' function which is designed to fetch a list of Pokémon data using PokéAPI. Once the whole list loaded properly I created a limit of 10 Pokémon per request. Once data is retrieved, it calls 'displayPokemonList(data)' to render each Pokémon's name, stats, and types onto the page.</p>
+
+        <h1 class="h4">Fetch List From API</h1>
+
+<pre><code class="language-javascript">//fetch and display Pokemon data
+function getAllPokemon() {
+     const limit = 10;
+     const offset = (currentPage - 1) * limit;
+    
+     //loading spinner
+     document.getElementById('spinner').style.display = 'block';
+
+     //to fetch data
+     fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`)
+         .then(response => response.json())
+         .then(data =>{
+             displayPokemonList(data.results);
+             document.getElementById('spinner').style.display = 'none'; //hides spinner once loaded
+         });
+         .catch(error => {
+             console.error('Error fetching Pokémon:', error);
+             document.getElementById('spinner').style.display = 'none'; //hides spinner on error
+         });
+}
+
+
+//to display Pokémon list
+function displayPokemonList(pokemonData) {
+     const resultContainer = document.getElementById('result-container');
+
+     pokemonData.results.forEach(pokemon => {
+         const pokemonUrl = pokemon.url;
+         fetch(pokemonUrl)
+             .then(response => response.json())
+             .then(pokemonDetails => {
+                 const pokemonElement = document.createElement('div');
+                 pokemonElement.classList.add('pokemon');
+                 pokemonElement.innerHTML = `
+                     &lt;h2&gt;${pokemonDetails.name}&lt;/h2&gt;
+                     &lt;p class="list"&gt;Stats:&lt;/p&gt;
+                     &lt;ul class="list"&gt;
+                         &lt;li&gt;HP: ${pokemonDetails.stats[0].base_stat}&lt;/li&gt;
+                         &lt;li&gt;Attack: ${pokemonDetails.stats[1].base_stat}&lt;/li&gt;
+                         &lt;li&gt;Defense: ${pokemonDetails.stats[2].base_stat}&lt;/li&gt;
+                         &lt;li&gt;Special Attack: ${pokemonDetails.stats[3].base_stat}&lt;/li&gt;
+                         &lt;li&gt;Special Defense: ${pokemonDetails.stats[4].base_stat}&lt;/li&gt;
+                         &lt;li&gt;Speed: ${pokemonDetails.stats[5].base_stat}&lt;/li&gt;
+                     &lt;/ul&gt;
+                     &lt;p&gt;Types: ${pokemonDetails.types.map(type => type.type.name).join(', ')}&lt;/p&gt;
+                 `;
+                 resultContainer.appendChild(pokemonElement);
+             })
+             .catch(error => console.error('Error fetching Pokémon details:', error));
+     });
+
+     // Hide load more button if no more Pokémon to fetch
+     if (!pokemonData.next) {
+         document.querySelector('.load-more-button').style.display = 'none'; 
+     }
+}</code></pre>
+
+      <p class="proj-text">To enhance user experience and provide continuous content, a pagination system using a button was implemented. The 'loadMorePokemon()' funtion increments the 'currentPage' variable, trigerring a call to 'getAllPokemon()'. Referring to what was previously said clicking the button and triggering 'getAllPokemon()' would load another 10 Pokémon, appending the next set to the existing list on page.</p>
+
+      <h1 class="h4">Load More Function</h1>
+<pre><code class="language-javascript">//function to load more Pokémon
+function loadMorePokemon() {
+     currentPage++;
+     getAllPokemon();
+}
+</code>  </pre>
+
+      <p class="proj-text">I then added the search funtionality, this allows users to find specific Pokémon by their name. The 'searchPokemon()' funtion retrieves the value from the search input field, formats it for the API query, and fetches the corresponding data. If successful only the Pokémon searched should display, including name, stats. and types.</p>
+      </div>
+
+      <h1 class="h4">Search Funtion</h1>
+<pre><code class="language-javascript">// Function to search for a specific Pokémon
+function searchPokemon() {
+     const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+     if (searchQuery === '') return;
+    
+     // Show spinner while fetching data
+     document.getElementById('spinner').style.display = 'block';
+    
+     fetch(`https://pokeapi.co/api/v2/pokemon/${searchQuery}`)
+         .then(response => {
+             if (!response.ok) {
+                 throw new Error('Pokemon not found');
+             }
+             return response.json();
+         })
+         .then(pokemonDetails => {
+             const resultContainer = document.getElementById('result-container');
+             resultContainer.innerHTML = '';
+             const pokemonElement = document.createElement('div');
+             pokemonElement.classList.add('pokemon');
+             pokemonElement.innerHTML = `
+                 &lt;h2&gt;${pokemonDetails.name}&lt;/h2&gt;
+                 &lt;p&gt;Stats:&lt;/p&gt;
+                 &lt;ul&gt;
+                     &lt;li&gt;HP: ${pokemonDetails.stats[0].base_stat}&lt;/li&gt;
+                     &lt;li&gt;Attack: ${pokemonDetails.stats[1].base_stat}&lt;/li&gt;
+                     &lt;li&gt;Defense: ${pokemonDetails.stats[2].base_stat}&lt;/li&gt;
+                     &lt;li&gt;Special Attack: ${pokemonDetails.stats[3].base_stat}&lt;/li&gt;
+                     &lt;li&gt;Special Defense: ${pokemonDetails.stats[4].base_stat}&lt;/li&gt;
+                     &lt;li&gt;Speed: ${pokemonDetails.stats[5].base_stat}&lt;/li&gt;
+                 &lt;/ul&gt;
+                 &lt;p&gt;Types: ${pokemonDetails.types.map(type => type.type.name).join(', ')}&lt;/p&gt;
+             `;
+             resultContainer.appendChild(pokemonElement);
+             document.getElementById('spinner').style.display = 'none';
+             document.getElementById('back-button').style.display = 'block';
+         })
+         .catch(error => {
+             console.error('Error searching Pokémon:', error);
+             const resultContainer = document.getElementById('result-container');
+             resultContainer.innerHTML = '<p>Pokémon not found.</p>';
+             document.getElementById('spinner').style.display = 'none';
+         });
+}</code>  </pre>
+
+    <p class="proj-text">Lastly, once my project was done I went ahead and styled it, making sure the cards were a good size, adding colour, and importing fonts. Even with the additional styles, it felt as if it was missing something. For this reason, I decided to add images of each Pokémon along with the data. This enhanced the user experience and made the application more visually appealing.</p>
+    <p class="source-text">API: <a class="nano-link" href="https://pokeapi.co">PokéAPI</a></p>
+      <div class="spacer-small"></div>
+
+      <div class="col-sm-12 text-center live"><a href="https://pokemon.evankraus.ca" target="_blank"><button class="liveProj">Live Project</button></a></div>
+
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 footer-txt">© 2024 Evan Kraus</div>
+        <div class="col-sm-4"><p class="email-footer">evkraus03@gmail.com</p></div>
+        <div class="col-sm-2"><a href="https://www.linkedin.com/in/evan-kraus-78bb1a274/" target="_blank"><img class="social-footer" src="img/LinkedinLogo.svg" alt="Linkedin social media icon"></a></div>
+        <div class="col-sm-2"><a href="#" target="_blank"><img class="social-footer" src="img/GetHubLogo.svg" alt="GitHub social media logo"></a></div>
+      </div>
+    </div>  
+  </footer>
+
+</body>
+</html>
