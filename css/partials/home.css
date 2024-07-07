@@ -12,9 +12,9 @@
     font-variation-settings: "ital" 0, "wdth" 100, "wght" 700;
 }
 .head-text{
-    color: #686868;
-    width: 30em;
-    font-size: 0.18em;
+    color: white;
+    width: 22em;
+    font-size: 0.28em;
     padding-left: 0.5em;
 }
 .social-icon{
@@ -54,7 +54,7 @@
 }
 .about-txt{
     color: #686868;
-    font-size: 1.1em;
+    font-size: 1.22em;
 }
 .about-link{
     color: #BE97C6;
@@ -81,11 +81,14 @@
 .work-title{
     color: #DCC48E;
     font-size: 6em;
+    line-height: 1.15em;
     padding-top: 0.5em;
     font-family: "peridot-pe-variable", sans-serif;
     font-variation-settings: "ital" 0, "wdth" 100, "wght" 700;
 }
-
+.card-text{
+    color: #c5c5c5;
+}
 @media only screen and (max-width: 1400px) {
     .home-ab{
         display: flex;
