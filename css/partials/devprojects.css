@@ -101,9 +101,11 @@ h5{
 }
 .file-img{
     scale: 1.6;
+    padding: 1em;
 }
 .db-img{
     scale: 1.8;
+    padding: 1em;
 }
 .slide-sub{
     color: white;

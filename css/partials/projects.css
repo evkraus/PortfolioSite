@@ -45,6 +45,7 @@ p {
 
 /* Card styles */
 .card {
+  margin-top: 1.5em;
   background-color: #444444;
 }
 
@@ -81,7 +82,11 @@ p {
 .show {
   display: block;
 }
-
+.heading-text {
+    color: white;
+    font-size: 1.2em;
+    padding-left: 0.5em;
+}
 /* Button styles */
 .btn {
   border: none;
