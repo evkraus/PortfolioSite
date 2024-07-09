@@ -95,9 +95,34 @@ footer {
     padding: 0.3em;
 }
 
-.footer-linkedin, .footer-git {
-    width: 2.5em; /* Adjust size as needed */
-    margin: 0 0.5em; /* Adjust spacing between icons */
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .col-sm-5 {
+    display: flex;
+    align-items: center;
+}
+
+.footer .col-sm-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5em; /* Add padding to adjust vertical alignment */
+}
+
+.footer-txt {
+    color: #727272;
+    text-align: center; /* Center align text for smaller screens */
 }
 
 .email-footer {
@@ -107,6 +132,50 @@ footer {
     text-decoration: none;
     color: #b37cbe;
     line-height: 1.5; /* Adjust line height for better alignment */
+}
+
+.footer-linkedin, .footer-git {
+    width: 2.5em; 
+    margin: 0 0.5em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .email-footer{
+        font-size: 0.85em;
+    }
+    .footer-txt{
+        font-size: 0.7em;
+    }
+    .footer-linkedin, .footer-git {
+        width: 2em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .connect-title {
+        width: 2em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .connect-title {
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .col-sm-2 {
+        margin-top: 1em;
+    }
+
+    .footer-linkedin, .footer-git {
+        margin: 0.5em;
+    }
 }
 
 @media only screen and (max-width: 650px) {
