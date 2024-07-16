@@ -7,31 +7,36 @@
     font-variation-settings: "ital" 0, "wdth" 100, "wght" 700;
 }
 
+.container {
+    margin-top: 20px;
+}
+
+/* Styling for the strong about text */
 .abt-strong {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
     color: white;
-    font-size: 1.5em;
-    width: 22em;
-    padding-top: 2em;
 }
 
+/* General styling for the about text */
 .about-txt {
+    font-size: 1rem;
+    margin-top: 10px;
     color: #686868;
-    width: 35em;
-    font-size: 1.15em;
 }
 
+/* Style for social media icons */
 .social-icon {
-    width: 4.5em;
-    padding-right: 1em;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
 }
 
-.about-img {
-    width: 20em;
-    height: 45em;
-    object-fit: cover;
-    box-shadow: 0px 0px 30px #BE97C6;
+/* Image styling */
+.home-photo {
+    width: 100%;
+    border-radius: 15px;
 }
-
 .h2 {
     color: #DCC48E;
     width: 6em;
@@ -74,7 +79,7 @@
 .carousel {
     margin-top: 0;
     padding-top: 0;
-    width: 70%;
+    width: 50%;
 }
 
 .abt-carousel {
