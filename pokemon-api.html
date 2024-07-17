@@ -98,7 +98,7 @@
 
       <div class="col-sm-12">
         <p class="proj-text">My inital focus was on fetching and displaying all the Pokémon data I would need on the page. I used the 'getAllPokemon()' function which is designed to fetch a list of Pokémon data using PokéAPI. Once the whole list loaded properly I created a limit of 10 Pokémon per request. Once data is retrieved, it calls 'displayPokemonList(data)' to render each Pokémon's name, stats, and types onto the page.</p>
-
+        <div class="spacer-smaller"></div>
         <h1 class="h4">Fetch List From API</h1>
 
 <pre><code class="language-javascript">//fetch and display Pokemon data
@@ -159,7 +159,7 @@ function displayPokemonList(pokemonData) {
 }</code></pre>
 
       <p class="proj-text">To enhance user experience and provide continuous content, a pagination system using a button was implemented. The 'loadMorePokemon()' funtion increments the 'currentPage' variable, trigerring a call to 'getAllPokemon()'. Referring to what was previously said clicking the button and triggering 'getAllPokemon()' would load another 10 Pokémon, appending the next set to the existing list on page.</p>
-
+      <div class="spacer-smaller"></div>
       <h1 class="h4">Load More Function</h1>
 <pre><code class="language-javascript">//function to load more Pokémon
 function loadMorePokemon() {

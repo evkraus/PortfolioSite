@@ -59,6 +59,9 @@ hr.solid {
     height: 4em;
 }
 
+.spacer-smaller {
+    height: 2em;
+}
 .connect-title {
     padding: 0em;
 }

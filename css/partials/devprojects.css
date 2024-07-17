@@ -42,10 +42,11 @@
 .liveProj{
     color: black;
     border-radius: 60px;
+    font-size: 1.4em;
     border: none;
     background-color: #BE97C6;
-    width: 40em;
-    height: 5em;
+    width: 13em;
+    height: 3em;
 }
 .codeImg{
     border-radius: 50px;
