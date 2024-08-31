@@ -43,12 +43,12 @@ nav {
 
 /* --- LINE DIVIDERS --- */
 hr.solid {
-    border-top: 3px solid #686868;
+    border-top: 3px solid #969696;
     width: 100%;
 }
 
 .footer-txt {
-    color: #727272;
+    color: #7e7e7e;
 }
 
 .spacer {
@@ -83,7 +83,7 @@ footer {
 }
 
 .connect-txt {
-    color: #686868;
+    color: #969696;
     padding-left: 0.2em;
 }
 
